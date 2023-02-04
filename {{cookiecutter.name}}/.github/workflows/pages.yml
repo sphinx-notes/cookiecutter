@@ -1,0 +1,25 @@
+name: Deploy Sphinx documentation to Pages
+
+# Runs on pushes targeting the default branch
+on:
+  push:
+    branches: [master]
+
+# Cancel any in-progress job or run
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#concurrency
+concurrency:
+  group: {% raw %}${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+
+jobs:
+  pages:
+    runs-on: ubuntu-20.04
+    environment:
+      name: github-pages
+      url: {% raw %}${{ steps.deployment.outputs.page_url }}{% endraw %}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+    - id: deployment
+      uses: {{ cookiecutter.github_owner }}/pages@v3

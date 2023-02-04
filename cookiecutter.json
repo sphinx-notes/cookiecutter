@@ -1,0 +1,23 @@
+{
+    "author_email": "i@silverrainz.me",
+    "author_name": "Shengyu Zhang",
+    "description": "DESCRIPTION",
+    "full_name": "sphinxnotes-strike",
+    "github_owner": "sphinx-notes",
+    "github_repo": "strike",
+    "name": "strike",
+    "namespace": "sphinxnotes",
+    "others": {
+        "any": "DESCRIPTION",
+        "extweb": "DESCRIPTION",
+        "isso": "DESCRIPTION",
+        "lilypond": "DESCRIPTION",
+        "mock": "DESCRIPTION",
+        "pages": "DESCRIPTION",
+        "recentupdate": "DESCRIPTION",
+        "snippet": "DESCRIPTION"
+    },
+    "pypi_name": "sphinxnotes-strike",
+    "pypi_owner": "SilverRainZ",
+    "version": "0.1.0"
+}

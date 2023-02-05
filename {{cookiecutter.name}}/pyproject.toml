@@ -4,6 +4,46 @@
 # Read more about the various options under:
 # https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
 
+[project]
+name = "{{ cookiecutter.full_name }}"
+description = "{{ cookiecutter.description }}"
+readme = "README.rst"
+license = { file = "BSD-3-Clause" }
+authors = [ { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" } ]
+maintainers = [ { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" } ]
+keywords = ["sphinx", "extension", "documentation"] # TOOD: additional_keywords
+classifiers = [
+    # "Development Status :: 4 - Beta",
+    "Environment :: Plugins",
+    "Framework :: Sphinx",
+    "Framework :: Sphinx :: Extension",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+]
+
+requires-python = ">=3.8"
+dependencies = [
+    "Sphinx >= 4",
+]
+
+dynamic = ["version"] # required by setuptools_scm, see section [build-system]
+
+[project.optional-dependencies]
+docs = ["furo"]
+test = ["pytest"]
+dev = ["build", "twine"]
+
+[project.urls]
+homepage = "https://sphinx.silverrainz.me/{{ cookiecutter.name }}"
+documentation = "https://sphinx.silverrainz.me/{{ cookiecutter.name }}"
+repository = "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}"
+changelog = "https://sphinx.silverrainz.me/{{ cookiecutter.name }}/changelog.html"
+tracker = "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/issues"
+
 [build-system]
 requires = ["setuptools>=46.1.0", "setuptools_scm[toml]>=5", "wheel"]
 build-backend = "setuptools.build_meta"
@@ -12,3 +52,8 @@ build-backend = "setuptools.build_meta"
 # For smarter version schemes and other configuration options,
 # check out https://github.com/pypa/setuptools_scm
 version_scheme = "no-guess-dev"
+
+[tool.setuptools.packages.find]
+# Find namespace package,
+# check out https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#finding-namespace-packages
+where = ["src"]

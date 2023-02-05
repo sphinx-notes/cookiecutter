@@ -12,7 +12,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = '{{ cookiecutter.full_name }}'
-author = '{{ cookiecutter.author_name }}'
+author = '{{ cookiecutter.author }}'
 copyright = "{% now 'local', '%Y' %}, " + author
 
 # The full version, including alpha/beta/rc tags

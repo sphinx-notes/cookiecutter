@@ -26,8 +26,7 @@ class Project:
     description: str
 
     #: Author meta information.
-    author_name: str
-    author_email: str
+    author: str
 
     # Github meta information.
     github_owner: str
@@ -52,8 +51,7 @@ class Project:
         # Fill static fields.
         self.namespace = 'sphinxnotes'
         self.version = '0.1.0'
-        self.author_name = 'Shengyu Zhang'
-        self.author_email = 'i@silverrainz.me'
+        self.author= 'Shengyu Zhang'
         self.github_owner = 'sphinx-notes'
         self.pypi_owner = 'SilverRainZ'
         # self.additional_docs = {}
@@ -65,9 +63,8 @@ class Project:
         self.pypi_name = self.full_name
 
         # Fetch dynamic fields from Github.
-        # repo = Github().get_user(self.github_owner).get_repo(self.github_repo)
-        # self.description = repo.description
-        self.description = 'DESCRIPTION'
+        repo = Github().get_user(self.github_owner).get_repo(self.github_repo)
+        self.description = repo.description
 
     def to_json(self) -> str:
         return json.dumps(self.__dict__, sort_keys=True, indent=4)

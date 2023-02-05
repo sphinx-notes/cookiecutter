@@ -9,8 +9,8 @@ name = "{{ cookiecutter.full_name }}"
 description = "{{ cookiecutter.description }}"
 readme = "README.rst"
 license = { file = "BSD-3-Clause" }
-authors = [ { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" } ]
-maintainers = [ { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" } ]
+authors = [ { name = "{{ cookiecutter.author }}" } ]
+maintainers = [ { name = "{{ cookiecutter.author }}" } ]
 keywords = ["sphinx", "extension", "documentation"] # TOOD: additional_keywords
 classifiers = [
     # "Development Status :: 4 - Beta",

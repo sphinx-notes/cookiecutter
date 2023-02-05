@@ -1,7 +1,6 @@
 {
-    "author_email": "i@silverrainz.me",
-    "author_name": "Shengyu Zhang",
-    "description": "DESCRIPTION",
+    "author": "Shengyu Zhang",
+    "description": "Sphinx extension for strikethrough text support",
     "full_name": "sphinxnotes-strike",
     "github_owner": "sphinx-notes",
     "github_repo": "strike",

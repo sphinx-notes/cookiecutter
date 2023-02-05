@@ -1,5 +1,6 @@
-# Minimal makefile for Sphinx documentation
+# This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
 #
+# Minimal makefile for Sphinx documentation
 
 # You can set these variables from the command line.
 SPHINXOPTS    =

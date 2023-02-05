@@ -1,3 +1,5 @@
+# This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+#
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full

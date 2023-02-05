@@ -1,3 +1,5 @@
+.. This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+
 {% for _ in cookiecutter.full_name %}={% endfor %}
 {{ cookiecutter.full_name }}
 {% for _ in cookiecutter.full_name %}={% endfor %}
@@ -17,6 +19,8 @@
 .. image:: https://img.shields.io/pypi/dw/{{ cookiecutter.pypi_name }}
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
+
+{{ cookiecutter.description }}.
 
 * Documentation: https://sphinx.silverrainz.me/{{ cookiecutter.name }}
 * Source: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}

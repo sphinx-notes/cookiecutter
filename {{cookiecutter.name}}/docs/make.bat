@@ -1,3 +1,5 @@
+REM This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+
 @ECHO OFF
 
 pushd %~dp0

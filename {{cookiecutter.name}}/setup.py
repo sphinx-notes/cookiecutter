@@ -1,6 +1,8 @@
+# This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+
 """
 Setup file for {{ cookiecutter.full_name }}.
-Use setup.cfg to configure your project.
+Use pyproject.toml to configure your project.
 """
 from setuptools import setup
 

@@ -1,4 +1,7 @@
+# This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+
 include LICENSE
+include README.rst
 
 recursive-include tests *
 recursive-exclude * __pycache__

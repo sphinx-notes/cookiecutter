@@ -1,3 +1,5 @@
+.. This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+
 ===============
 Getting Started
 ===============

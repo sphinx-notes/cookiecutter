@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import sys
 import json
 
 from github import Github
@@ -18,6 +19,8 @@ ALL_PROJECTS = [
 ]
 
 class Project:
+    """ This object will be converted to cookiecutter.json prompts file. """
+
     #: Project meta information.
     namespace: str
     name: str
@@ -36,11 +39,11 @@ class Project:
     pypi_owner: str
     pypi_name: str
 
-    # Documentation meta information.
-    # additional_docs: dict[str,str] # FIXME: ust list[str]: IndexError: list index out of range
-
     # Other projects.
-    others: dict[str,str] # name -> description
+    others: list[list[str]]
+
+    # Documentation meta information.
+    additional_docs: list[list[str]]
 
     def __init__(self, name: str):
         if name not in ALL_PROJECTS:
@@ -54,8 +57,11 @@ class Project:
         self.author= 'Shengyu Zhang'
         self.github_owner = 'sphinx-notes'
         self.pypi_owner = 'SilverRainZ'
-        # self.additional_docs = {}
-        self.others = {x: 'DESCRIPTION' for x in ALL_PROJECTS if x != name}
+        # NOTE: We use list[list[str]] here because in cookiecutter.json,
+        # the outer array is used as choice variables.
+        # check out https://cookiecutter.readthedocs.io/en/latest/advanced/choice_variables.html
+        self.others = [[x for x in ALL_PROJECTS if x != name]]
+        self.additional_docs = [[]]
 
         # Fill self-reference fields.
         self.full_name = f'{self.namespace}-{self.name}'
@@ -70,7 +76,7 @@ class Project:
         return json.dumps(self.__dict__, sort_keys=True, indent=4)
 
 
-p = Project('strike')
+p = Project(sys.argv[1])
 
 with open('./cookiecutter.json', 'w') as f:
     f.write(p.to_json())

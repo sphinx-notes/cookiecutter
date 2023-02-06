@@ -9,9 +9,10 @@ A Cookiecutter_ template for generating Sphinx extensions.
 Usage
 =====
 
-::
+Setup template::
 
-   $ cookiecutter https://github.com/sphinx-notes/template
+   $ git submodule add https://github.com/sphinx-notes/template ./sphinxnotes.
+   $ cookiecutter 
 
 Acknowledgment
 ==============

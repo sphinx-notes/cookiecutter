@@ -1,0 +1,6 @@
+{
+    "cookiecutter": {
+        "name": "strike",
+        "description": "Add strikethrough text support to Sphinx",
+    }
+}

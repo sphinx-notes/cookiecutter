@@ -8,7 +8,7 @@
     "github_owner": ["sphinx-notes"],
     "github_repo": "strike",
     "name": "strike",
-    "namespace": "sphinxnotes",
+    "namespace": ["sphinxnotes"],
     "others": [
         [
             "any",

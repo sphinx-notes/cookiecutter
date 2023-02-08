@@ -1,15 +1,14 @@
 {
-    "name": "strike",
-    "description": "Sphinx extension for strikethrough text support",
-
     "additional_docs": [
         []
     ],
-    "author": ["Shengyu Zhang"],
-    "full_name": ["sphinxnotes-strike"],
-    "github_owner": ["sphinx-notes"],
-    "github_repo": ["strike"],
-    "namespace": ["sphinxnotes"],
+    "author": "Shengyu Zhang",
+    "description": "Sphinx extension for strikethrough text support",
+    "full_name": "sphinxnotes-strike",
+    "github_owner": "sphinx-notes",
+    "github_repo": "strike",
+    "name": "strike",
+    "namespace": "sphinxnotes",
     "others": [
         [
             "any",
@@ -22,7 +21,7 @@
             "snippet"
         ]
     ],
-    "pypi_name": ["sphinxnotes-strike"],
-    "pypi_owner":[ "SilverRainZ"],
-    "version": ["0.1.0"]
+    "pypi_name": "sphinxnotes-strike",
+    "pypi_owner": "SilverRainZ",
+    "version": "0.1.0"
 }

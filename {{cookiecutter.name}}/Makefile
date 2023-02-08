@@ -28,4 +28,4 @@ test-upload: dist
 	$(PY) -m twine upload --repository testpypi $</*
 
 template:
-	./.{{cookiecutter.namespace}}/template/update.sh
+	./.{{cookiecutter.namespace}}/template/update.py

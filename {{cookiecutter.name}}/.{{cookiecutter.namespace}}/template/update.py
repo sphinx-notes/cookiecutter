@@ -2,8 +2,11 @@
 
 from os import path
 import subprocess
+import pprint
+
 from cookiecutter.main import cookiecutter
 from github import Github
+
 
 def run_shell(*args: str) -> str:
     return subprocess.run(args, capture_output=True, text=True).stdout
@@ -14,6 +17,13 @@ repo = path.basename(root)
 version = run_shell('git', 'describe', '--tags')
 desc = Github().get_user('{{ cookiecutter.github_owner }}').get_repo('{{ cookiecutter.github_repo }}')
 
+# assert repo == '{{ cookiecutter.github_owner }}'
+
+extra_context = {
+    'name': repo,
+    'version': version,
+}
+
 # Create project from the remote repository template.
 # .. seealso::
 #    - https://cookiecutter.readthedocs.io/en/1.7.2/cookiecutter.html#module-cookiecutter.main
@@ -23,7 +33,4 @@ cookiecutter('gh:{{ cookiecutter.github_owner }}/template',
              no_input=True,
              overwrite_if_exists=True,
              output_dir=root,
-             extra_context={
-                 'name': repo,
-                 'version': version,
-             })
+             extra_context=extra_context)

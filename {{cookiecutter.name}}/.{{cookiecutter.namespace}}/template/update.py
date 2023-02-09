@@ -8,7 +8,7 @@ from github import Github
 
 
 def run_shell(*args: str) -> str:
-    return subprocess.run(args, capture_output=True, text=True).stdout
+    return subprocess.run(args, capture_output=True, text=True).stdout.strip()
 
 # Fetch meta information.
 root = run_shell('git', 'rev-parse', '--show-toplevel')

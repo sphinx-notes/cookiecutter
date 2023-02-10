@@ -24,16 +24,17 @@ Contents
    {{ d }}
    {%- endfor %}
 
-Other Projects
-==============
+The Sphinx Notes Project
+========================
 
-There are other Sphinx extensions provided by the `Sphinx Notes Project`_ that you might be interested in:
+This project is a developed by `{{ cookiecutter.author }}`__,
+as part of **The Sphinx Notes Project**.
 
 .. toctree::
-   :caption: Other projects:
+   :caption: The Sphinx Notes Project
 
-   {% for p in cookiecutter.others %}
-   {{ p }} <https://sphinx.silverrainz.me/{{ p }}>
-   {%- endfor %}
+   Home <https://sphinx.silverrainz.me/>
+   Blog <https://silverrainz.me/blog/category/sphinx.html>
+   PyPI <https://pypi.org/search/?q={{ cookiecutter.namespace }}>
 
-.. _Sphinx Notes Project: https://sphinx.silverrainz.me
+__ https://github.com/SilverRainZ

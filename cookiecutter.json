@@ -11,6 +11,5 @@
     "pypi_name": "{{ cookiecutter.full_name }}",
     "pypi_owner": "SilverRainZ",
 
-    "others": [["any", "extweb", "isso", "lilypond", "mock", "pages", "recentupdate", "snippet"]],
     "additional_docs": [[]]
 }

@@ -14,7 +14,7 @@ def run_shell(*args: str) -> str:
 root = run_shell('git', 'rev-parse', '--show-toplevel')
 repo = path.basename(root)
 version = run_shell('git', 'describe', '--tags')
-desc = Github().get_user('{{ cookiecutter.github_owner }}').get_repo('{{ cookiecutter.github_repo }}')
+desc = Github().get_user('{{ cookiecutter.github_owner }}').get_repo('{{ cookiecutter.github_repo }}').description
 
 # assert repo == '{{ cookiecutter.github_repo }}'
 print(f'root: {root}')
@@ -27,10 +27,9 @@ print(f'desc: {desc}')
 #    - https://cookiecutter.readthedocs.io/en/1.7.2/cookiecutter.html#module-cookiecutter.main
 #    - https://cookiecutter.readthedocs.io/en/1.7.2/advanced/injecting_context.html
 cookiecutter('gh:{{ cookiecutter.github_owner }}/template',
-             checkout="submodule",
              no_input=True,
              overwrite_if_exists=True,
-             output_dir=root,
+             output_dir=path.dirname(root),
              extra_context={
                  'name': repo,
                  'version': version,

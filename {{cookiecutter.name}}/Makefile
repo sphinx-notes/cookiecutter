@@ -27,5 +27,5 @@ upload: dist
 test-upload: dist
 	$(PY) -m twine upload --repository testpypi $</*
 
-template:
+sync-template:
 	./.{{cookiecutter.namespace}}/template/update.py

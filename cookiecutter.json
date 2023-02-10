@@ -11,5 +11,6 @@
     "pypi_name": "{{ cookiecutter.full_name }}",
     "pypi_owner": "SilverRainZ",
 
+    "dependencies": [["Sphinx >= 4"]],
     "additional_docs": [[]]
 }

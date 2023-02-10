@@ -27,7 +27,9 @@ classifiers = [
 
 requires-python = ">=3.8"
 dependencies = [
-    "Sphinx >= 4",
+{%- for d in cookiecutter.dependencies %}
+    "{{ d }}",
+{%- endfor %}
 ]
 
 dynamic = ["version"] # required by setuptools_scm, see section [build-system]

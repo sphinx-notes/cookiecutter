@@ -2,16 +2,25 @@
 Sphinx Notes Extension Template
 ===============================
 
-.. note:: Still WORK IN PROGRESS.
-
 A Cookiecutter_ template for generating Sphinx extensions.
 
 Usage
 =====
 
-::
+Interactively setup project::
 
-   $ cookiecutter https://github.com/sphinx-notes/template
+   $ cookiecutter gh:sphinx-notes/template
+   namespace [sphinxnotes]:
+   name [demo]:
+   full_name [sphinxnotes-demo]:
+
+If you leave all parameters empty, project `demo` will be created in
+in the current directory.
+
+You can sync with newst template by::
+
+   $ cd demo
+   $ make sync-template
 
 Acknowledgment
 ==============

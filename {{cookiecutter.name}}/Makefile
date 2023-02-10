@@ -6,7 +6,7 @@ MAKE = make
 PY   = python3
 RM   = rm -rf
 
-.PHONY: docs test dist install upload testupload
+.PHONY: docs test dist install upload test-upload sync-template
 
 docs:
 	$(MAKE) -C docs/
@@ -24,5 +24,8 @@ install: dist
 upload: dist
 	$(PY) -m twine upload --repository pypi $</*
 
-testupload: dist
+test-upload: dist
 	$(PY) -m twine upload --repository testpypi $</*
+
+sync-template:
+	./.{{cookiecutter.namespace}}/template/update.py

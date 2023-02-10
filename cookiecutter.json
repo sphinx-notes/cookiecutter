@@ -1,27 +1,16 @@
 {
-    "additional_docs": [
-        []
-    ],
-    "author": "Shengyu Zhang",
-    "description": "Sphinx extension for strikethrough text support",
-    "full_name": "sphinxnotes-strike",
-    "github_owner": "sphinx-notes",
-    "github_repo": "strike",
-    "name": "strike",
     "namespace": "sphinxnotes",
-    "others": [
-        [
-            "any",
-            "extweb",
-            "isso",
-            "lilypond",
-            "mock",
-            "pages",
-            "recentupdate",
-            "snippet"
-        ]
-    ],
-    "pypi_name": "sphinxnotes-strike",
+    "name": "demo",
+    "full_name": "{{ cookiecutter.namespace }}-{{ cookiecutter.name }}",
+    "author": "Shengyu Zhang",
+    "description": "A demo of Sphinx extension, generated from https://github.com/sphinx-notes/template",
+    "version": "0.1.0",
+
+    "github_owner": "sphinx-notes",
+    "github_repo": "{{ cookiecutter.name }}",
+    "pypi_name": "{{ cookiecutter.full_name }}",
     "pypi_owner": "SilverRainZ",
-    "version": "0.1.0"
+
+    "others": [["any", "extweb", "isso", "lilypond", "mock", "pages", "recentupdate", "snippet"]],
+    "additional_docs": [[]]
 }

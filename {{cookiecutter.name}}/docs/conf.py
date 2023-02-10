@@ -64,8 +64,8 @@ html_theme_options = {}
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_theme_options = {
-    "source_repository": "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo}} /",
-    "source_branch": "main",
+    "source_repository": "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo}}/",
+    "source_branch": "master",
     "source_directory": "docs/",
 }
 

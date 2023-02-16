@@ -21,7 +21,7 @@ Then, add the extension name to ``extensions`` configuration item in your conf.p
 
    extensions = [
              # …
-             '{{ cookiecutter.pypi_name }}',
+             '{{ cookiecutter.namespace }}.{{ cookiecutter.name }}',
              # …
              ]
 

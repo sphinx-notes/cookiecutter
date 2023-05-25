@@ -1,4 +1,5 @@
-.. This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+.. This file is generated from {{ cookiecutter.github_owner }}/template.
+   You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
 {% for _ in cookiecutter.full_name %}={% endfor %}
 {{ cookiecutter.full_name }}

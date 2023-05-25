@@ -7,20 +7,18 @@ A Cookiecutter_ template for generating Sphinx extensions.
 Usage
 =====
 
-Interactively setup project::
+We use Cruft_ to create project interactively::
 
-   $ cookiecutter gh:sphinx-notes/template
+   $ cruft create https://github.com/sphinx-notes/template
    namespace [sphinxnotes]:
    name [demo]:
    full_name [sphinxnotes-demo]:
+   ...
 
-If you leave all parameters empty, project `demo` will be created in
-in the current directory.
-
-You can sync with newst template by::
+To keep sync with the newst template::
 
    $ cd demo
-   $ make sync-template
+   $ make update-template
 
 Acknowledgment
 ==============
@@ -28,7 +26,9 @@ Acknowledgment
 - Cookiecutter_
 - `Cookiecutter PyPackage`_
 - PyScaffold_
+- Cruft_
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _Cookiecutter PyPackage: https://github.com/cookiecutter/cookiecutter
 .. _PyScaffold: https://pyscaffold.org/en/stable/extensions.html
+.. _Cruft: https://github.com/cruft/cruft

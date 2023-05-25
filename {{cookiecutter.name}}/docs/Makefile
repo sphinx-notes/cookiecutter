@@ -1,5 +1,6 @@
-# This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
-#
+# This file is generated from {{ cookiecutter.github_owner }}/template.
+# You need to consider modifying the TEMPLATE or modifying THIS FILE.
+
 # Minimal makefile for Sphinx documentation
 
 # You can set these variables from the command line.

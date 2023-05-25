@@ -1,13 +1,45 @@
-.. This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+.. This file is generated from {{ cookiecutter.github_owner }}/template.
+   You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
 .. include:: ../README.rst
 
 Introduction
 ============
 
-.. include:: intro_for_index.rst
+.. ADDITIONAL CONTENT START
 
-You can quickly learn how to use this extension from :doc:`quickstart`.
+.. ADDITIONAL CONTENT END
+
+Getting Started
+===============
+
+.. note::
+
+   We assume you already have a Sphinx documentation,
+   if not, see `Getting Started with Sphinx`_.
+
+First, downloading extension from PyPI:
+
+.. code-block:: console
+
+   $ pip install {{ cookiecutter.pypi_name }}
+
+Then, add the extension name to ``extensions`` configuration item in your conf.py_:
+
+.. code-block:: python
+
+   extensions = [
+             # …
+             '{{ cookiecutter.namespace }}.{{ cookiecutter.name }}',
+             # …
+             ]
+
+.. _Getting Started with Sphinx: https://www.sphinx-doc.org/en/master/usage/quickstart.html
+.. _conf.py: https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+.. ADDITIONAL CONTENT START
+
+.. ADDITIONAL CONTENT END
 
 Contents
 ========
@@ -15,14 +47,10 @@ Contents
 .. toctree::
    :caption: Contents
 
-   quickstart
-   install
-   usage
-   conf
-   changelog
    {% for d in cookiecutter.additional_docs %}
    {{ d }}
    {%- endfor %}
+   changelog
 
 The Sphinx Notes Project
 ========================

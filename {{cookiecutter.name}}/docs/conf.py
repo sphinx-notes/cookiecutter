@@ -74,6 +74,7 @@ html_logo = html_favicon = '_images/sphinx-notes.png'
 
 # -- Extensions -------------------------------------------------------------
 
+# {% if cookiecutter.name != 'any' %} {# sphinxnotes-any should eat its dog food. #}
 extensions.append('sphinxnotes.any')
 from sphinxnotes.any import Schema, Field as F
 any_schemas = [
@@ -89,6 +90,7 @@ any_schemas = [
     #{% endraw %}
 ]
 primary_domain = 'any'
+# {% endif %}
 
 extensions.append('sphinx.ext.extlinks')
 extlinks = {

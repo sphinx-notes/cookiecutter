@@ -21,6 +21,10 @@
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
 
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+   :alt: Black Code Style
+
 {{ cookiecutter.description }}.
 
 * Documentation: https://sphinx.silverrainz.me/{{ cookiecutter.name }}

@@ -56,3 +56,8 @@ update-template:
 bump-version:
 	@echo -n "Please enter the version to bump: "
 	@read version && $(PY) -m cruft update --variables-to-update "{ \"version\" : \"$$version\" }"
+
+# Format code.
+.PHONY: fmt
+fmt:
+	$(PY) -m black .

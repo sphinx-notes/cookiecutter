@@ -40,6 +40,7 @@ dev = [
     "build",
     "twine",
     "cruft",
+    "black",
 ]
 test = [
     "pytest",
@@ -72,3 +73,5 @@ version_scheme = "no-guess-dev"
 # Find namespace package,
 # check out https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#finding-namespace-packages
 where = ["src"]
+
+[tool.black]

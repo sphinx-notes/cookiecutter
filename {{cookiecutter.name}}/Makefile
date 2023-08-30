@@ -35,3 +35,8 @@ test-upload: dist
 .PHONY: update-template
 update-template:
 	$(PY) -m cruft update
+
+.PHONY: bump-version
+bump-version:
+	@echo -n "Please enter the version to bump: "
+	@read version && cruft update --variables-to-update "{ \"version\" : \"$$version\" }"

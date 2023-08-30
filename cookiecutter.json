@@ -9,8 +9,5 @@
     "github_owner": "sphinx-notes",
     "github_repo": "{{ cookiecutter.name }}",
     "pypi_name": "{{ cookiecutter.full_name }}",
-    "pypi_owner": "SilverRainZ",
-
-    "dependencies": [["Sphinx >= 4"]],
-    "additional_docs": [[]]
+    "pypi_owner": "SilverRainZ"
 }

@@ -47,9 +47,6 @@ Contents
 .. toctree::
    :caption: Contents
 
-   {% for d in cookiecutter.additional_docs %}
-   {{ d }}
-   {%- endfor %}
    changelog
 
 The Sphinx Notes Project

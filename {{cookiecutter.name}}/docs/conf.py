@@ -87,6 +87,14 @@ any_schemas = [
            reference_template='🏷️{{ title }}',
            missing_reference_template='🏷️{{ title }}',
            ambiguous_reference_template='🏷️{{ title }}'),
+    Schema('confval',
+           name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
+           attrs={'type': F()},
+           content=F(),
+           description_template=open('_templates/confval.rst', 'r').read(),
+           reference_template='⚙️{{ title }}',
+           missing_reference_template='⚙️{{ title }}',
+           ambiguous_reference_template='⚙️{{ title }}'),
     #{% endraw %}
 ]
 primary_domain = 'any'

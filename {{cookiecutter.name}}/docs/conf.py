@@ -70,7 +70,7 @@ html_theme_options = {
 # It is used to indicate the location of document like canonical_url
 html_baseurl = 'https://sphinx.silverrainz.me/{{ cookiecutter.name }}'
 
-html_logo = html_favicon = '_images/sphinx-notes.png'
+html_logo = html_favicon = '_static/sphinx-notes.png'
 
 # -- Extensions -------------------------------------------------------------
 

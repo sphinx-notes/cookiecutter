@@ -84,9 +84,9 @@ any_schemas = [
            attrs={'date': F(referenceable=True)},
            content=F(form=F.Form.LINES),
            description_template=open('_templates/version.rst', 'r').read(),
-           reference_template='💽 {{ title }}',
-           missing_reference_template='💽 {{ title }}',
-           ambiguous_reference_template='💽 {{ title }}'),
+           reference_template='🏷️{{ title }}',
+           missing_reference_template='🏷️{{ title }}',
+           ambiguous_reference_template='🏷️{{ title }}'),
     #{% endraw %}
 ]
 primary_domain = 'any'
@@ -94,9 +94,9 @@ primary_domain = 'any'
 
 extensions.append('sphinx.ext.extlinks')
 extlinks = {
-    'issue': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/issues/%s', '💬 %s'),
-    'pull': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/pull/%s', '🚀 %s'),
-    'tag': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/releases/tag/%s', '🏷️ %s'),
+    'issue': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/issues/%s', '💬%s'),
+    'pull': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/pull/%s', '🚀%s'),
+    'tag': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/releases/tag/%s', '🏷️%s'),
 }
 
 extensions.append('sphinxcontrib.gtagjs')

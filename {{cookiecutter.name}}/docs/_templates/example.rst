@@ -10,7 +10,7 @@
    .. tab-item:: reStructuredText
 
       .. code:: rst
-       
+
          {% for line in content %}{{ line }}
          {% endfor %}
 {% elif style == 'grid'  %}
@@ -18,8 +18,10 @@
 
    .. grid-item-card::  reStructuredText
 
-      {% for line in content %}{{ line }}
-      {% endfor %}
+      .. code:: rst
+
+         {% for line in content %}{{ line }}
+         {% endfor %}
 
    .. grid-item-card:: Result
 

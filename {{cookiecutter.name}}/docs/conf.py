@@ -77,25 +77,37 @@ html_logo = html_favicon = '_static/sphinx-notes.png'
 # {% if cookiecutter.name != 'any' %} {# sphinxnotes-any should eat its dog food. #}
 extensions.append('sphinxnotes.any')
 from sphinxnotes.any import Schema, Field as F
+
+#{% raw %}
+version_schema = Schema('version',
+                        name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
+                        attrs={'date': F(referenceable=True)},
+                        content=F(form=F.Form.LINES),
+                        description_template=open('_templates/version.rst', 'r').read(),
+                        reference_template='🏷️{{ title }}',
+                        missing_reference_template='🏷️{{ title }}',
+                        ambiguous_reference_template='🏷️{{ title }}')
+confval_schema = Schema('confval',
+                        name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
+                        attrs={'type': F()},
+                        content=F(),
+                        description_template=open('_templates/confval.rst', 'r').read(),
+                        reference_template='⚙️{{ title }}',
+                        missing_reference_template='⚙️{{ title }}',
+                        ambiguous_reference_template='⚙️{{ title }}')
+example_schema = Schema('example',
+                        name=F(referenceable=True),
+                        content=F(form=F.Form.LINES),
+                        description_template=open('_templates/example.rst', 'r').read(),
+                        reference_template='📝{{ title }}',
+                        missing_reference_template='📝{{ title }}',
+                        ambiguous_reference_template='📝{{ title }}')
+#{% endraw %}
+
 any_schemas = [
-    #{% raw %}
-    Schema('version',
-           name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
-           attrs={'date': F(referenceable=True)},
-           content=F(form=F.Form.LINES),
-           description_template=open('_templates/version.rst', 'r').read(),
-           reference_template='🏷️{{ title }}',
-           missing_reference_template='🏷️{{ title }}',
-           ambiguous_reference_template='🏷️{{ title }}'),
-    Schema('confval',
-           name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
-           attrs={'type': F()},
-           content=F(),
-           description_template=open('_templates/confval.rst', 'r').read(),
-           reference_template='⚙️{{ title }}',
-           missing_reference_template='⚙️{{ title }}',
-           ambiguous_reference_template='⚙️{{ title }}'),
-    #{% endraw %}
+    version_schema,
+    confval_schema,
+    example_schema,
 ]
 primary_domain = 'any'
 # {% endif %}

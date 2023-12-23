@@ -122,6 +122,7 @@ extlinks = {
 extensions.append('sphinxcontrib.gtagjs')
 gtagjs_ids = ['G-E4SNX0WZYV']
 
+# {% if cookiecutter.name != 'demo' %} {# demo has no src directory #}
 # -- Eat your own dog food --------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -133,3 +134,4 @@ extensions.append('{{ cookiecutter.name }}')
 # DOG FOOD CONFIGURATION START
 
 # DOG FOOD CONFIGURATION END
+# {% endif %}

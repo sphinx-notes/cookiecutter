@@ -97,6 +97,7 @@ confval_schema = Schema('confval',
                         ambiguous_reference_template='⚙️{{ title }}')
 example_schema = Schema('example',
                         name=F(referenceable=True),
+                        attrs={'style': F()},
                         content=F(form=F.Form.LINES),
                         description_template=open('_templates/example.rst', 'r').read(),
                         reference_template='📝{{ title }}',

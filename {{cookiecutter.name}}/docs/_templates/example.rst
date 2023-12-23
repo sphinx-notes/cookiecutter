@@ -1,17 +1,5 @@
 {# prevent the template from being escaped by cookiecutter #} {% raw %}
-{% if style = 'tab' %}
-.. grid:: 2
-
-   .. grid-item-card::  reStructuredText
-
-      {% for line in content %}{{ line }}
-      {% endfor %}
-
-   .. grid-item-card:: Result
-
-      {% for line in content %}{{ line }}
-      {% endfor %}
-{% else %}
+{% if style == 'tab' or style is none %}
 .. tab-set::
 
    .. tab-item:: Result
@@ -25,5 +13,17 @@
        
          {% for line in content %}{{ line }}
          {% endfor %}
+{% elif style == 'grid'  %}
+.. grid:: 2
+
+   .. grid-item-card::  reStructuredText
+
+      {% for line in content %}{{ line }}
+      {% endfor %}
+
+   .. grid-item-card:: Result
+
+      {% for line in content %}{{ line }}
+      {% endfor %}
 {% endif %}
 {% endraw %}

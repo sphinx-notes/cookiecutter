@@ -1,3 +1,4 @@
+{# prevent the template from being escaped by cookiecutter #} {% raw %}
 {% if style = 'tab' %}
 .. grid:: 2
 
@@ -25,3 +26,4 @@
          {% for line in content %}{{ line }}
          {% endfor %}
 {% endif %}
+{% endraw %}

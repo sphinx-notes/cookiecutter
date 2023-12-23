@@ -1,6 +1,6 @@
-:ref:`📅{% raw %}{{ date }}{% endraw %} <any-version.date>` | :tag:`{% raw %}{{ title }}{% endraw %}`
+{# prevent the template from being escaped by cookiecutter #} {% raw %}
+:ref:`📅{{ date }} <any-version.date>` | :tag:`{{ title }}`
 
-{% raw %}
 {% for line in content %}
 {{ line }}
 {% endfor %}

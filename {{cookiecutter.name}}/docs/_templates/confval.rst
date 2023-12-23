@@ -1,5 +1,5 @@
-:type: :py:class:`{% raw %}{{ type }}{% endraw %}`
+{# prevent the template from being escaped by cookiecutter #} {% raw %}
+:type: :py:class:`{{ type }}`
 
-{% raw %}
 {{ content }}
 {% endraw %}

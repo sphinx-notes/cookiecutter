@@ -9,7 +9,7 @@ Usage
 
 We use Cruft_ to create project interactively::
 
-   $ cruft create https://github.com/sphinx-notes/template
+   $ cruft create https://github.com/sphinx-notes/cookiecutter
    namespace [sphinxnotes]:
    name [demo]:
    full_name [sphinxnotes-demo]:

@@ -1,4 +1,4 @@
-REM This file is generated from {{ cookiecutter.github_owner }}/template. DO NOT EDIT.
+REM This file is generated from {{ cookiecutter.github_owner }}/cookiecutter. DO NOT EDIT.
 
 @ECHO OFF
 

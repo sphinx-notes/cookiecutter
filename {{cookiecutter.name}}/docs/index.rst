@@ -1,4 +1,4 @@
-.. This file is generated from {{ cookiecutter.github_owner }}/template.
+.. This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
    You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
 .. include:: ../README.rst

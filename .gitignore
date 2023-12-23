@@ -1,2 +1,5 @@
 # Cookiecutter
 output/
+
+# See Makefile demo target.
+demo/

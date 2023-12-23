@@ -77,7 +77,6 @@ html_logo = html_favicon = '_static/sphinx-notes.png'
 # {% if cookiecutter.name != 'any' %} {# sphinxnotes-any should eat its dog food. #}
 extensions.append('sphinxnotes.any')
 from sphinxnotes.any import Schema, Field as F
-
 #{% raw %}
 version_schema = Schema('version',
                         name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
@@ -104,7 +103,6 @@ example_schema = Schema('example',
                         missing_reference_template='📝{{ title }}',
                         ambiguous_reference_template='📝{{ title }}')
 #{% endraw %}
-
 any_schemas = [
     version_schema,
     confval_schema,

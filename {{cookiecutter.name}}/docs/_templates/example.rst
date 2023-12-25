@@ -1,4 +1,4 @@
-{# prevent the template from being escaped by cookiecutter #} {% raw %}
+{# prevent the template from being escaped by cookiecutter #}{% raw %}
 {% if style is not defined or style == 'tab' %}
 .. tab-set::
 

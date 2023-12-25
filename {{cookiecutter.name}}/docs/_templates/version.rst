@@ -1,4 +1,4 @@
-{# prevent the template from being escaped by cookiecutter #} {% raw %}
+{# prevent the template from being escaped by cookiecutter #}{% raw %}
 :Date: :ref:`📅{{ date }} <any-version.date>`
 :Download: :tag:`{{ title }}`
 

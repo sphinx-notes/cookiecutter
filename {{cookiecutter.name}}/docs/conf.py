@@ -1,4 +1,4 @@
-# This file is generated from {{ cookiecutter.github_owner }}/template.
+# This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
 # You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
 # Configuration file for the Sphinx documentation builder.
@@ -70,38 +70,64 @@ html_theme_options = {
 # It is used to indicate the location of document like canonical_url
 html_baseurl = 'https://sphinx.silverrainz.me/{{ cookiecutter.name }}'
 
-html_logo = html_favicon = '_images/sphinx-notes.png'
+html_logo = html_favicon = '_static/sphinx-notes.png'
 
 # -- Extensions -------------------------------------------------------------
 
 # {% if cookiecutter.name != 'any' %} {# sphinxnotes-any should eat its dog food. #}
 extensions.append('sphinxnotes.any')
 from sphinxnotes.any import Schema, Field as F
+#{% raw %}
+version_schema = Schema('version',
+                        name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
+                        attrs={'date': F(referenceable=True)},
+                        content=F(form=F.Form.LINES),
+                        description_template=open('_templates/version.rst', 'r').read(),
+                        reference_template='🏷️{{ title }}',
+                        missing_reference_template='🏷️{{ title }}',
+                        ambiguous_reference_template='🏷️{{ title }}')
+confval_schema = Schema('confval',
+                        name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
+                        attrs={
+                            'type': F(),
+                            'default': F(),
+                            'choice': F(form=F.Form.WORDS),
+                            'versionadded': F(),
+                            'versionchanged': F(form=F.Form.LINES),
+                        },
+                        content=F(),
+                        description_template=open('_templates/confval.rst', 'r').read(),
+                        reference_template='⚙️{{ title }}',
+                        missing_reference_template='⚙️{{ title }}',
+                        ambiguous_reference_template='⚙️{{ title }}')
+example_schema = Schema('example',
+                        name=F(referenceable=True),
+                        attrs={'style': F()},
+                        content=F(form=F.Form.LINES),
+                        description_template=open('_templates/example.rst', 'r').read(),
+                        reference_template='📝{{ title }}',
+                        missing_reference_template='📝{{ title }}',
+                        ambiguous_reference_template='📝{{ title }}')
+#{% endraw %}
 any_schemas = [
-    #{% raw %}
-    Schema('version',
-           name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
-           attrs={'date': F(referenceable=True)},
-           content=F(form=F.Form.LINES),
-           description_template=open('_templates/version.rst', 'r').read(),
-           reference_template='💽 {{ title }}',
-           missing_reference_template='💽 {{ title }}',
-           ambiguous_reference_template='💽 {{ title }}'),
-    #{% endraw %}
+    version_schema,
+    confval_schema,
+    example_schema,
 ]
 primary_domain = 'any'
 # {% endif %}
 
 extensions.append('sphinx.ext.extlinks')
 extlinks = {
-    'issue': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/issues/%s', '💬 %s'),
-    'pull': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/pull/%s', '🚀 %s'),
-    'tag': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/releases/tag/%s', '🏷️ %s'),
+    'issue': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/issues/%s', '💬%s'),
+    'pull': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/pull/%s', '🚀%s'),
+    'tag': ('https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/releases/tag/%s', '🏷️%s'),
 }
 
 extensions.append('sphinxcontrib.gtagjs')
 gtagjs_ids = ['G-E4SNX0WZYV']
 
+# {% if cookiecutter.name != 'demo' %} {# demo has no src directory #}
 # -- Eat your own dog food --------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -113,3 +139,4 @@ extensions.append('{{ cookiecutter.name }}')
 # DOG FOOD CONFIGURATION START
 
 # DOG FOOD CONFIGURATION END
+# {% endif %}

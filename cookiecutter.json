@@ -3,7 +3,7 @@
     "name": "demo",
     "full_name": "{{ cookiecutter.namespace }}-{{ cookiecutter.name }}",
     "author": "Shengyu Zhang",
-    "description": "A demo of Sphinx extension, generated from https://github.com/sphinx-notes/template",
+    "description": "A demo of Sphinx extension, generated from https://github.com/sphinx-notes/cookiecutter",
     "version": "0.1.0",
 
     "github_owner": "sphinx-notes",

@@ -1,4 +1,4 @@
-.. This file is generated from {{ cookiecutter.github_owner }}/template.
+.. This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
    You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
 {% for _ in cookiecutter.full_name %}={% endfor %}
@@ -17,7 +17,7 @@
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package
 
-.. image:: https://img.shields.io/pypi/dw/{{ cookiecutter.pypi_name }}
+.. image:: https://img.shields.io/pypi/dm/{{ cookiecutter.pypi_name }}
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
 

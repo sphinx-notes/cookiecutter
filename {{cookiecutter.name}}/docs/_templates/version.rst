@@ -1,10 +1,7 @@
-.. list-table::
-   :align: left
+{# prevent the template from being escaped by cookiecutter #}{% raw %}
+:Date: :ref:`📅{{ date }} <any-version.date>`
+:Download: :tag:`{{ title }}`
 
-   * - :ref:`📅 {% raw %}{{ date }}{% endraw %} <any-version.date>`
-     - :tag:`{% raw %}{{ title }}{% endraw %}`
-
-{% raw %}
 {% for line in content %}
 {{ line }}
 {% endfor %}

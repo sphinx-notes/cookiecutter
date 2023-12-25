@@ -1,4 +1,4 @@
-.. This file is generated from {{ cookiecutter.github_owner }}/template.
+.. This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
    You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
 .. include:: ../README.rst
@@ -52,7 +52,7 @@ Contents
 The Sphinx Notes Project
 ========================
 
-This project is a developed by `{{ cookiecutter.author }}`__,
+The project is developed by `{{ cookiecutter.author }}`__,
 as part of **The Sphinx Notes Project**.
 
 .. toctree::

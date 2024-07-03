@@ -5,7 +5,6 @@
 {{ cookiecutter.full_name }}
 {% for _ in cookiecutter.full_name %}={% endfor %}
 
-
 .. |docs| image:: https://img.shields.io/github/deployments/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}/github-pages
    :target: https://sphinx.silverrainz.me/{{ cookiecutter.name }}
    :alt: Documentation Status
@@ -26,8 +25,11 @@
 
 {{ cookiecutter.description }}.
 
-* Documentation: https://sphinx.silverrainz.me/{{ cookiecutter.name }}
-* Source: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}
-* Changelog: https://sphinx.silverrainz.me/{{ cookiecutter.name }}/changelog.html
-* Tracker: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/issues
-* Download: https://pypi.org/project/{{ cookiecutter.pypi_name }}/#files
+.. ADDITIONAL INTRODUCTION START 
+   (should be written in standard reStructuredText, without any Sphinx features)
+
+.. ADDITIONAL INTRODUCTION END
+
+Please refer to Documentation_ for more details.
+
+.. _Documentation: https://sphinx.silverrainz.me/{{ cookiecutter.name }}

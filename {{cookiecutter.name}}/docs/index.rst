@@ -3,13 +3,6 @@
 
 .. include:: ../README.rst
 
-Introduction
-============
-
-.. ADDITIONAL CONTENT START
-
-.. ADDITIONAL CONTENT END
-
 Getting Started
 ===============
 

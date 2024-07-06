@@ -1,7 +1,34 @@
 .. This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
    You need to consider modifying the TEMPLATE or modifying THIS FILE.
 
-.. include:: ../README.rst
+{% for _ in cookiecutter.full_name %}={% endfor %}
+{{ cookiecutter.full_name }}
+{% for _ in cookiecutter.full_name %}={% endfor %}
+
+.. |docs| image:: https://img.shields.io/github/deployments/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}/github-pages
+   :target: https://sphinx.silverrainz.me/{{ cookiecutter.name }}
+   :alt: Documentation Status
+
+.. |license| image:: https://img.shields.io/github/license/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}
+   :target: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/blob/master/LICENSE
+   :alt: Open Source License
+
+.. |pypi| image:: https://img.shields.io/pypi/v/{{ cookiecutter.pypi_name }}.svg
+   :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
+   :alt: PyPI Package
+
+.. |download| image:: https://img.shields.io/pypi/dm/{{ cookiecutter.pypi_name }}
+   :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
+   :alt: PyPI Package Downloads
+
+|docs| |license| |pypi| |download|
+
+Introduction
+============
+
+.. INTRODUCTION START
+
+.. INTRODUCTION END
 
 Getting Started
 ===============
@@ -17,7 +44,8 @@ First, downloading extension from PyPI:
 
    $ pip install {{ cookiecutter.pypi_name }}
 
-Then, add the extension name to ``extensions`` configuration item in your conf.py_:
+Then, add the extension name to ``extensions`` configuration item in your
+:parsed_literal:`conf.py_`:
 
 .. code-block:: python
 

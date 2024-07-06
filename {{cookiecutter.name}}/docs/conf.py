@@ -138,6 +138,13 @@ intersphinx_mapping = {
     'jinja': ('https://jinja.palletsprojects.com/en/latest/', None),
 }
 
+#{% if cookiecutter.name != 'comboroles' %} {# should eat its dog food. #}
+extensions.append('sphinxnotes.comboroles')
+comboroles_roles = {
+    'parsed_literal': (['literal'], True),
+}
+#{% endif %}
+
 # {% if cookiecutter.name != 'demo' %} {# demo has no src directory #}
 # -- Eat your own dog food --------------------------------------------------
 

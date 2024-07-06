@@ -25,10 +25,10 @@
 
 {{ cookiecutter.description }}.
 
-.. ADDITIONAL INTRODUCTION START 
-   (should be written in standard reStructuredText, without any Sphinx features)
+.. INTRODUCTION START 
+   (MUST written in standard reStructuredText, without Sphinx stuff)
 
-.. ADDITIONAL INTRODUCTION END
+.. INTRODUCTION END
 
 Please refer to Documentation_ for more details.
 

@@ -1,27 +1,11 @@
-name: Publish New Release
+name: Publish Github Release
 
 on:
   push:
     tags:
-      - "*"
+      - "[0-9]+.[0-9]+" # MAJOR.MINOR (1.0: y, 1.0a0: n, 1.0.1: n)
 
 jobs:
-  pypi:
-    name: Publish package distributions to PyPI
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-      url: https://pypi.org/p/{{ cookiecutter.pypi_name }}
-    permissions:
-      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
-    - run: pip install build twine && make dist
-    - uses: pypa/gh-action-pypi-publish@release/v1
-      with: 
-        password: {% raw %}${{ secrets.PYPI_API_TOKEN }}{% endraw %}
-
   release:
     name: Publish Github Release
     needs: [pypi]
@@ -33,4 +17,4 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           body: |
-            Changelog: https://sphinx.silverrainz.me/{{ cookiecutter.name }}/changelog.html#version-{% raw %}${{ github.ref_name }}{% endraw %}
+            Changelog: https://sphinx.silverrainz.me/{{ cookiecutter.name }}/changelog.html

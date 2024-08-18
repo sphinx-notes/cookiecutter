@@ -1,2 +1,10 @@
+# This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
+# You need to consider modifying the TEMPLATE or modifying THIS FILE.
+
 [format]
 quote-style = "single"
+
+[lint.per-file-ignores]
+"docs/conf.py" = [
+    "E402", # allow module level import not at top of file
+]

@@ -74,10 +74,10 @@ html_logo = html_favicon = '_static/sphinx-notes.png'
 
 # -- Extensions -------------------------------------------------------------
 
-# {% if cookiecutter.name != 'any' %} {# sphinxnotes-any should eat its dog food. #}
+{% if cookiecutter.name != 'any' -%}
 extensions.append('sphinxnotes.any')
 from sphinxnotes.any import Schema, Field as F
-#{% raw %}
+{% raw -%}
 version_schema = Schema('version',
                         name=F(unique=True, referenceable=True, required=True, form=F.Form.LINES),
                         attrs={'date': F(referenceable=True)},
@@ -108,14 +108,14 @@ example_schema = Schema('example',
                         reference_template='📝{{ title }}',
                         missing_reference_template='📝{{ title }}',
                         ambiguous_reference_template='📝{{ title }}')
-#{% endraw %}
+{%- endraw %}
 any_schemas = [
     version_schema,
     confval_schema,
     example_schema,
 ]
 primary_domain = 'any'
-# {% endif %}
+{-% endif %}
 
 extensions.append('sphinx.ext.extlinks')
 extlinks = {
@@ -138,14 +138,14 @@ intersphinx_mapping = {
     'jinja': ('https://jinja.palletsprojects.com/en/latest/', None),
 }
 
-#{% if cookiecutter.name != 'comboroles' %} {# should eat its dog food. #}
+{% if cookiecutter.name != 'comboroles' -%}
 extensions.append('sphinxnotes.comboroles')
 comboroles_roles = {
     'parsed_literal': (['literal'], True),
 }
-#{% endif %}
+{%- endif %}
 
-# {% if cookiecutter.name != 'demo' %} {# demo has no src directory #}
+{% if cookiecutter.name != 'demo' -%}
 # -- Eat your own dog food --------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -157,4 +157,4 @@ extensions.append('{{ cookiecutter.name }}')
 # DOG FOOD CONFIGURATION START
 
 # DOG FOOD CONFIGURATION END
-# {% endif %}
+{%- endif %}

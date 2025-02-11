@@ -102,8 +102,8 @@ comboroles_roles = {
     'parsed_literal': (['literal'], True),
 }
 {% endif %}
-{# sphinxnotes-project should eat its dog food -#}
-{% if cookiecutter.name != 'projectt' -%}
+{# sphinxnotes-{project,any} should eat its dog food -#}
+{% if cookiecutter.name not in ['project', 'any'] -%}
 extensions.append('sphinxnotes.project')
 primary_domain = 'any'
 {% endif %}

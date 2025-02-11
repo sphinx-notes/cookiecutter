@@ -46,15 +46,15 @@ test = [
 ]
 docs = [
     "furo",
-{% if cookiecutter.name not in ['project', 'any'] %}
+{%- if cookiecutter.name not in ['project', 'any'] %}
     "sphinxnotes-project",
-{%- endif -%}
+{%- endif %}
     "sphinx_design",
     "sphinx_copybutton",
     "sphinxcontrib-gtagjs",
-{% if cookiecutter.name != 'comboroles' %}
+{%- if cookiecutter.name != 'comboroles' %}
     "sphinxnotes-comboroles",
-{%- endif -%}
+{%- endif %}
 ]
 
 [project.urls]

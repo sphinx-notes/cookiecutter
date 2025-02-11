@@ -94,7 +94,6 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master', None),
     'jinja': ('https://jinja.palletsprojects.com/en/latest/', None),
 }
-
 {#- sphinxnotes-comboroles should eat its dog food #}
 {% if cookiecutter.name != 'comboroles' %}
 extensions.append('sphinxnotes.comboroles')
@@ -103,12 +102,12 @@ comboroles_roles = {
 }
 {% endif %}
 {#- sphinxnotes-{project,any} should eat its dog food #}
-{% if cookiecutter.name not in ['project', 'any'] %}
+{%- if cookiecutter.name not in ['project', 'any'] %}
 extensions.append('sphinxnotes.project')
 primary_domain = 'any'
 {% endif %}
 {#- demo has no src directory #}
-{% if cookiecutter.name != 'demo' %}
+{%- if cookiecutter.name != 'demo' %}
 # -- Eat your own dog food --------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,

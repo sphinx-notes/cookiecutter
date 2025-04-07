@@ -5,7 +5,7 @@
 {{ cookiecutter.full_name }}
 {% for _ in cookiecutter.full_name %}={% endfor %}
 
-.. |docs| image:: https://img.shields.io/github/deployments/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}/github-pages
+.. |docs| image:: https://img.shields.io/github/deployments/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}/github-pages?label=docs
    :target: https://sphinx.silverrainz.me/{{ cookiecutter.name }}
    :alt: Documentation Status
 
@@ -21,7 +21,11 @@
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
 
-|docs| |license| |pypi| |download|
+.. |github| image:: https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white/
+   :target: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}
+   :alt: GitHub Repository
+
+|docs| |license| |pypi| |download| |github|
 
 Introduction
 ============

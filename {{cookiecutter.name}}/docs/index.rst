@@ -21,7 +21,10 @@
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
 
-|docs| |license| |pypi| |download|
+.. |github| image:: https://img.shields.io/github/stars/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}
+   :alt: GitHub Repo stars
+
+|docs| |license| |pypi| |download| |github|
 
 Introduction
 ============

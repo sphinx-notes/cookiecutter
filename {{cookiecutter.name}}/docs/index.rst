@@ -33,14 +33,14 @@ Introduction
 Getting Started
 ===============
 
-{% if cookiecutter.is_sphinx_extension %}
+{%- if cookiecutter.is_sphinx_extension %}
 .. note::
 
    We assume you already have a Sphinx documentation,
    if not, see `Getting Started with Sphinx`_.
 {%- endif %}
 
-{% if cookiecutter.is_sphinx_extension %}
+{%- if cookiecutter.is_sphinx_extension %}
 First, downloading extension from PyPI:
 
 .. code-block:: console
@@ -48,7 +48,7 @@ First, downloading extension from PyPI:
    $ pip install {{ cookiecutter.pypi_name }}
 {%- endif %}
 
-{% if cookiecutter.is_sphinx_extension %}
+{%- if cookiecutter.is_sphinx_extension %}
 Then, add the extension name to ``extensions`` configuration item in your
 :parsed_literal:`conf.py_`:
 

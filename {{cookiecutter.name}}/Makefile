@@ -77,7 +77,7 @@ apply-rej:
 
 # Detect the minimum Python versions needed to run code.
 pyver:
-	$(PY) -m vermin src/ \
+	vermin src/ \
 		--eval-annotations \
 		--target={{ cookiecutter.python_version }}- \
 		--versions

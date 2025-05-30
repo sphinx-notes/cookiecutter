@@ -38,7 +38,7 @@ Getting Started
    We assume you already have a Sphinx documentation,
    if not, see `Getting Started with Sphinx`_.
 
-{% endif %}
+{% endif -%}
 {%- if cookiecutter.is_sphinx_extension %}
 First, downloading extension from PyPI:
 
@@ -46,7 +46,7 @@ First, downloading extension from PyPI:
 
    $ pip install {{ cookiecutter.pypi_name }}
 
-{% endif %}
+{% endif -%}
 {%- if cookiecutter.is_sphinx_extension %}
 Then, add the extension name to ``extensions`` configuration item in your
 :parsed_literal:`conf.py_`:
@@ -62,7 +62,6 @@ Then, add the extension name to ``extensions`` configuration item in your
 .. _Getting Started with Sphinx: https://www.sphinx-doc.org/en/master/usage/quickstart.html
 .. _conf.py: https://www.sphinx-doc.org/en/master/usage/configuration.html
 {% endif %}
-
 .. ADDITIONAL CONTENT START
 
 .. ADDITIONAL CONTENT END

@@ -4,10 +4,16 @@
     "full_name": "{{ cookiecutter.namespace }}-{{ cookiecutter.name }}",
     "author": "Shengyu Zhang",
     "description": "A demo of Sphinx extension, generated from https://github.com/sphinx-notes/cookiecutter",
-    "version": "0.1.0",
+    "version": "1.0a0",
 
     "github_owner": "sphinx-notes",
     "github_repo": "{{ cookiecutter.name }}",
     "pypi_name": "{{ cookiecutter.full_name }}",
-    "pypi_owner": "SilverRainZ"
+    "pypi_owner": "SilverRainZ",
+
+    "is_python_project": true,
+    "python_version": "3.12",
+    "is_sphinx_extension": true,
+    "sphinx_version": "7.0",
+    "development_status": ["3 - Alpha", "5 - Production/Stable"]
 }

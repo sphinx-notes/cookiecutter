@@ -17,7 +17,7 @@ keywords = [
     "sphinx",
     "extension",
     "documentation",
-    "sphinxnotes"
+    "sphinxnotes",
 
     # CUSTOM KEYWORDS START
     # CUSTOM KEYWORDS END
@@ -71,9 +71,9 @@ docs = [
     "sphinxext-opengraph",
     "sphinx-last-updated-by-git",
 
-    # Dependencies to sphinxnotes projcts.
+    # Dependencies of sphinxnotes projcts.
 {%- if cookiecutter.name not in ['project', 'any'] %}
-    "sphinxnotes-project",
+    "sphinxnotes-project @ git+https://github.com/sphinx-notes/project.git",
 {%- endif %}
 {%- if cookiecutter.name != 'comboroles' %}
     "sphinxnotes-comboroles",

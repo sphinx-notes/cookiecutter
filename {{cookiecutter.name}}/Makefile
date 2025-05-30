@@ -76,11 +76,8 @@ apply-rej:
 	done
 
 # Detect the minimum Python versions needed to run code.
-pyver:
-	vermin src/ \
-		--eval-annotations \
-		--target={{ cookiecutter.python_version }}- \
-		--versions
+pyvermin:
+	vermin --eval-annotations --target={{ cookiecutter.python_version }}- --versions src/
 
 # Update project version.
 .PHONY: bump-version

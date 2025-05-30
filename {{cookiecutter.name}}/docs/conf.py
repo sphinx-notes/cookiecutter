@@ -115,7 +115,7 @@ extensions.append('sphinxnotes.project')
 primary_domain = 'any'
 {% endif %}
 {#- demo has no src directory #}
-{%- if not cookiecutter.is_sphinx_extension %}
+{%- if cookiecutter.is_sphinx_extension %}
 # -- Eat your own dog food --------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -131,4 +131,4 @@ extensions.append('{{ cookiecutter.name }}')
 # DOG FOOD CONFIGURATION END
 {%- endif %}
 
-# CUSTOM CONFIGURATION START
+# CUSTOM CONFIGURATION

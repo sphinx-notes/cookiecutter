@@ -39,6 +39,7 @@ classifiers = [
     # CUSTOM CLASSIFIERS END
 ]
 
+# See ``make pyver`` for more details.
 requires-python = ">={{ cookiecutter.python_version }}"
 dependencies = [
     "Sphinx >= {{ cookiecutter.sphinx_version }}",
@@ -56,6 +57,7 @@ dev = [
     "cruft",
     "ruff",
     "pre-commit",
+    "vermin",
 ]
 test = [
     "pytest",

@@ -9,26 +9,22 @@ RM    = rm -rf
 GIT   = git
 OPEN  = xdg-open
 
-# Build sphinx documentation.
 .PHONY: docs
 docs:
 	$(MAKE) -C docs/
 
-# View sphinx HTML documentation in browser.
-.PHONY: view
+.PHONY:
 view:
 	$(OPEN) docs/_build/html/index.html
 
 .PHONY: clean
 clean:
-	$(MAKE) -C docs/ clean | true
-	$(RM) dist/ | true
+	$(MAKE) -C docs/ clean; $(RM) dist/
 
-.PHONY: clean
+.PHONY: fmt
 fmt:
-	ruff format src/
+	ruff format src/ && ruff check --fix src/
 
-# Run unittest.
 .PHONY: test
 test:
 	$(PY) -m unittest discover -s tests -v
@@ -54,12 +50,6 @@ install: dist
 upload: dist
 	$(PY) -m twine upload --repository pypi $</*
 
-# Same to the aboved "upload" target, but this publishs to PyPI test server
-# <https://test.pypi.org/>.
-.PHONY: upload-test
-upload-test: dist
-	$(PY) -m twine upload --repository testpypi $</*
-
 # Keep up to date with the latest template.
 # See also https://github.com/sphinx-notes/cookiecutter.
 .PHONY: update-template
@@ -76,6 +66,4 @@ bump-version:
 	@echo -n "Please enter the version to bump: "
 	@read version && $(PY) -m cruft update --variables-to-update "{ \"version\" : \"$$version\" }"
 
-# EXTRA TARGETS START
-
-# EXTRA TARGETS END
+# CUSTOM TARGETS START

@@ -8,19 +8,15 @@
 .. |docs| image:: https://img.shields.io/github/deployments/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}/github-pages?label=docs
    :target: https://sphinx.silverrainz.me/{{ cookiecutter.name }}
    :alt: Documentation Status
-
 .. |license| image:: https://img.shields.io/github/license/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}
    :target: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo }}/blob/master/LICENSE
    :alt: Open Source License
-
 .. |pypi| image:: https://img.shields.io/pypi/v/{{ cookiecutter.pypi_name }}.svg
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package
-
 .. |download| image:: https://img.shields.io/pypi/dm/{{ cookiecutter.pypi_name }}
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
-
 .. |github| image:: https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white/
    :target: https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.name }}
    :alt: GitHub Repository
@@ -37,17 +33,22 @@ Introduction
 Getting Started
 ===============
 
+{%- if cookiecutter.is_sphinx_extension %}
 .. note::
 
    We assume you already have a Sphinx documentation,
    if not, see `Getting Started with Sphinx`_.
+{%- endif %}
 
+{%- if cookiecutter.is_sphinx_extension %}
 First, downloading extension from PyPI:
 
 .. code-block:: console
 
    $ pip install {{ cookiecutter.pypi_name }}
+{%- endif %}
 
+{%- if cookiecutter.is_sphinx_extension %}
 Then, add the extension name to ``extensions`` configuration item in your
 :parsed_literal:`conf.py_`:
 
@@ -61,6 +62,7 @@ Then, add the extension name to ``extensions`` configuration item in your
 
 .. _Getting Started with Sphinx: https://www.sphinx-doc.org/en/master/usage/quickstart.html
 .. _conf.py: https://www.sphinx-doc.org/en/master/usage/configuration.html
+{%- endif %}
 
 .. ADDITIONAL CONTENT START
 

@@ -1,8 +1,6 @@
 # Create a demo from the current template.
 # NOTE: only committed changes take effect.
+.PHONY: demo
 demo:
-	cruft create . --no-input
-
-clean:
 	rm -rf demo/
-
+	cruft create .

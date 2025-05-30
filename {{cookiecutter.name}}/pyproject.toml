@@ -15,10 +15,12 @@ authors = [ { name = "{{ cookiecutter.author }}" } ]
 maintainers = [ { name = "{{ cookiecutter.author }}" } ]
 keywords = ["sphinx", "extension", "documentation", "sphinxnotes"]
 classifiers = [
-    # "Development Status :: 4 - Beta",
+    "Development Status :: {{ cookiecutter.development_status }}",
+    {%- if cookiecutter.is_sphinx_extension %}
     "Environment :: Plugins",
     "Framework :: Sphinx",
     "Framework :: Sphinx :: Extension",
+    {%- endif %}
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -26,9 +28,13 @@ classifiers = [
     "Topic :: Documentation :: Sphinx",
 ]
 
-requires-python = ">=3.8"
+requires-python = ">={{ cookiecutter.python_version }}"
 dependencies = [
-    "Sphinx >= 4",
+    "Sphinx >= {{ cookiecutter.sphinx_version }}",
+
+    # CUSTOM DEPENDENCIES START
+
+    # CUSTOM DEPENDENCIES END
 ]
 
 dynamic = ["version"] # required by setuptools_scm, see section [build-system]
@@ -46,12 +52,17 @@ test = [
 ]
 docs = [
     "furo",
-{%- if cookiecutter.name not in ['project', 'any'] %}
-    "sphinxnotes-project",
-{%- endif %}
     "sphinx_design",
     "sphinx_copybutton",
     "sphinxcontrib-gtagjs",
+    "sphinx-sitemap",
+    "sphinxext-opengraph",
+    "sphinx-last-updated-by-git",
+
+    # Dependencies to sphinxnotes projcts.
+{%- if cookiecutter.name not in ['project', 'any'] %}
+    "sphinxnotes-project",
+{%- endif %}
 {%- if cookiecutter.name != 'comboroles' %}
     "sphinxnotes-comboroles",
 {%- endif %}
@@ -77,3 +88,5 @@ version_scheme = "no-guess-dev"
 # Find namespace package,
 # check out https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#finding-namespace-packages
 where = ["src"]
+
+# CUSTOM CONFIGURATION START

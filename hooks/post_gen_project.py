@@ -5,7 +5,7 @@ REMOVE_PATHS = [
     'pyproject.toml',
     'ruff.toml',
     'MANIFEST.in',
-    'src/{{ cookiecutter.namespace }}/{{ cookiecutter.name }}/.gitkeep',
+    'src/{{cookiecutter.namespace}}/{{cookiecutter.name}}/meta.py',
     # {% endif %}'
 ]
 

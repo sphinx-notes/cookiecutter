@@ -39,7 +39,7 @@ Getting Started
    if not, see `Getting Started with Sphinx`_.
 
 {% endif -%}
-{%- if cookiecutter.is_sphinx_extension %}
+{%- if cookiecutter.is_python_project %}
 First, downloading extension from PyPI:
 
 .. code-block:: console

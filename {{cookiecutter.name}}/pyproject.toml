@@ -73,7 +73,7 @@ docs = [
 
     # Dependencies of sphinxnotes projcts.
 {%- if cookiecutter.name not in ['project', 'any'] %}
-    "sphinxnotes-project @ git+https://github.com/sphinx-notes/project.git",
+    "sphinxnotes-project",
 {%- endif %}
 {%- if cookiecutter.name != 'comboroles' %}
     "sphinxnotes-comboroles",

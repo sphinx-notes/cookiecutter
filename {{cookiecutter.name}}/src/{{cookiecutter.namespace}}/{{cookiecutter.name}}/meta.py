@@ -8,9 +8,9 @@
 from __future__ import annotations
 from importlib import metadata
 
-__project__ = "{{ cookiecutter.full_name }}"
-__author__ = "{{ cookiecutter.author }}"
-__desc__ = "{{ cookiecutter.description }}"
+__project__ = '{{ cookiecutter.full_name }}'
+__author__ = '{{ cookiecutter.author }}'
+__desc__ = '{{ cookiecutter.description }}'
 
 try:
     __version__ = metadata.version('{{ cookiecutter.pypi_name }}')
@@ -28,7 +28,7 @@ def pre_setup(app):
 def post_setup(app):
     return {
         'version': __version__,
-        "parallel_read_safe": True,
-        "parallel_write_safe": True
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
     }
 #{% endif %}

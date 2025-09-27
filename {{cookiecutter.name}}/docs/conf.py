@@ -114,7 +114,6 @@ comboroles_roles = {
 extensions.append('sphinxnotes.project')
 primary_domain = 'any'
 {% endif %}
-{#- demo has no src directory #}
 {%- if cookiecutter.is_sphinx_extension %}
 # -- Eat your own dog food --------------------------------------------------
 
@@ -125,10 +124,6 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../src/{{ cookiecutter.namespace }}'))
 extensions.append('{{ cookiecutter.name }}')
-
-# DOG FOOD CONFIGURATION START
-
-# DOG FOOD CONFIGURATION END
 {%- endif %}
 
 # CUSTOM CONFIGURATION

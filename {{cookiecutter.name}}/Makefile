@@ -75,10 +75,6 @@ apply-rej:
 		wiggle --replace $${rej%.rej} $$rej; \
 	done
 
-# Detect the minimum Python versions needed to run code.
-pyvermin:
-	vermin --eval-annotations --target={{ cookiecutter.python_version }}- --versions src/
-
 # Update project version.
 .PHONY: bump-version
 bump-version:

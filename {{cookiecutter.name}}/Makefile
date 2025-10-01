@@ -82,9 +82,10 @@ bump-version:
 	@read version && $(PY) -m cruft update --variables-to-update "{ \"version\" : \"$$version\" }"
 
 bump-version-done:
-	VERSION=$(shell jq -r '.version' .cruft.json | head -c8)
-	$(GIT) commit -m "chore: Bump version to $(VERSION)"
-	$(GIT) tag $(VERSION)
+	VERSION=$(shell jq -r '.context.cookiecutter.version' .cruft.json); \
+	$(GIT) commit -m "chore: Bump version to $$VERSION"; \
+	$(GIT) tag $$VERSION
+
 
 ################################################################################
 # CUSTOM TARGETS

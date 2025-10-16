@@ -15,7 +15,7 @@
    :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package
 .. |download| image:: https://img.shields.io/pypi/dm/{{ cookiecutter.pypi_name }}
-   :target: https://pypi.python.org/pypi/{{ cookiecutter.pypi_name }}
+   :target: https://pypistats.org/packages/{{ cookiecutter.pypi_name }}
    :alt: PyPI Package Downloads
 
 |docs| |license| |pypi| |download|

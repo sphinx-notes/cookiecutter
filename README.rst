@@ -18,7 +18,9 @@ We use Cruft_ to create project interactively::
 To keep sync with the newst template::
 
    $ cd demo
-   $ make update-template
+   $ make tmpl-update
+   ...
+   $ make tmpl-update-done
 
 Acknowledgment
 ==============

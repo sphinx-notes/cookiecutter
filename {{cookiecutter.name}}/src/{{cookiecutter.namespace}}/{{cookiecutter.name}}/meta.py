@@ -8,6 +8,10 @@
 from __future__ import annotations
 from importlib import metadata
 
+from sphinx.application import Sphinx
+from sphinx.util.typing import ExtensionMetadata
+
+
 __project__ = '{{ cookiecutter.full_name }}'
 __author__ = '{{ cookiecutter.author }}'
 __desc__ = '{{ cookiecutter.description }}'
@@ -23,11 +27,11 @@ except metadata.PackageNotFoundError:
 ################################################################################
 
 
-def pre_setup(app):
+def pre_setup(app: Sphinx) -> None:
     app.require_sphinx('{{ cookiecutter.sphinx_version }}')
 
 
-def post_setup(app):
+def post_setup(app: Sphinx) -> ExtensionMetadata:
     return {
         'version': __version__,
         'parallel_read_safe': True,

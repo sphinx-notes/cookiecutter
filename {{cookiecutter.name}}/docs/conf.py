@@ -55,12 +55,6 @@ keep_warnings = True
 #
 html_theme = 'furo'
 
-html_theme_options = {}
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
 html_theme_options = {
     "source_repository": "https://github.com/{{ cookiecutter.github_owner }}/{{ cookiecutter.github_repo}}/",
     "source_branch": "master",
@@ -72,6 +66,13 @@ html_theme_options = {
 html_baseurl = 'https://sphinx.silverrainz.me/{{ cookiecutter.name }}'
 
 html_logo = html_favicon = '_static/sphinx-notes.png'
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ['_static']
+
+html_css_files = ['custom.css']
 
 # -- Extensions -------------------------------------------------------------
 

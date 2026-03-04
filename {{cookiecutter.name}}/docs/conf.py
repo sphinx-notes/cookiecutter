@@ -24,6 +24,7 @@ version = release = '{{ cookiecutter.version }}'
 extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.doctest',
+    'sphinx.ext.viewcode',
     'sphinx_design',
     'sphinx_copybutton',
     'sphinx_last_updated_by_git',

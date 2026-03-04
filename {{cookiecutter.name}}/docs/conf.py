@@ -123,8 +123,8 @@ primary_domain = 'any'
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../src/{{ cookiecutter.namespace }}'))
-extensions.append('{{ cookiecutter.name }}')
+sys.path.insert(0, os.path.abspath('../src/'))
+extensions.append('{{ cookiecutter.namespace }}.{{ cookiecutter.name }}')
 {%- endif %}
 
 # CUSTOM CONFIGURATION

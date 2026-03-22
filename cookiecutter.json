@@ -8,6 +8,8 @@
 
     "github_owner": "sphinx-notes",
     "github_repo": "{{ cookiecutter.name }}",
+    "generated_file_header": "This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.",
+    "dont_edit_header": "DO NOT EDIT.",
     "pypi_name": "{{ cookiecutter.full_name }}",
     "pypi_owner": "SilverRainZ",
 

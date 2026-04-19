@@ -1,3 +1,5 @@
+# {{ cookiecutter.generated_file_header }}
+
 name: Ruff
 on: [ push, pull_request ]
 

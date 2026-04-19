@@ -71,7 +71,7 @@ docs = [
     "sphinx-last-updated-by-git",
 
     # Dependencies of sphinxnotes projcts.
-{%- if cookiecutter.name not in ['project', 'any'] %}
+{%- if cookiecutter.name != 'project' %}
     "sphinxnotes-project",
 {%- endif %}
 {%- if cookiecutter.name != 'comboroles' %}

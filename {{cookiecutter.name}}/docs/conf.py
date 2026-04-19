@@ -91,6 +91,9 @@ gtagjs_ids = ['G-E4SNX0WZYV']
 extensions.append('sphinx.ext.autodoc')
 autoclass_content = 'init'
 autodoc_typehints = 'description'
+autodoc_default_options = {
+    'member-order': 'bysource',
+}
 
 extensions.append('sphinx.ext.intersphinx')
 intersphinx_mapping = {}

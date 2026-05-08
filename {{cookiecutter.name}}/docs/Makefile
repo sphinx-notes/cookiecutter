@@ -1,5 +1,4 @@
-# This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
-# You need to consider modifying the TEMPLATE or modifying THIS FILE.
+# {{ cookiecutter.generated_file_header }}
 
 # Minimal makefile for Sphinx documentation
 

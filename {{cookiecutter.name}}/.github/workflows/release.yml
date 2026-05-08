@@ -1,3 +1,5 @@
+# {{ cookiecutter.generated_file_header }}
+
 name: Publish Github Release
 
 on:

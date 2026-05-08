@@ -1,5 +1,5 @@
-# This file is generated from {{ cookiecutter.github_owner }}/cookiecutter.
-# DO NOT EDIT.
+# {{ cookiecutter.generated_file_header }}
+# {{ cookiecutter.dont_edit_header }}
 
 import unittest
 

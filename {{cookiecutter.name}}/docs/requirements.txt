@@ -1,3 +1,5 @@
+# {{ cookiecutter.generated_file_header }}
+
 # Documentation build dependencies.
 # Keep these out of pyproject optional-dependencies to avoid resolver issues.
 furo
@@ -12,3 +14,6 @@ sphinxnotes-project
 {%- if cookiecutter.name != 'comboroles' %}
 sphinxnotes-comboroles
 {%- endif %}
+
+# CUSTOM DOCS DEPENDENCIES START
+# CUSTOM DOCS DEPENDENCIES END

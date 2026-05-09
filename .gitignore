@@ -1,5 +1,6 @@
 # Cookiecutter
 output/
+.worktrees/
 
 # See Makefile demo target.
 demo/

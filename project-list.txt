@@ -1,0 +1,15 @@
+Active SphinxNotes projects that using the template:
+
+- any
+- fasthtml
+- incrbuild
+- isso
+- lilypond
+- picker
+- poc
+- project
+- render
+- strike
+- recentupdate
+- comboroles
+- mock

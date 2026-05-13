@@ -1,7 +1,7 @@
 # {{ cookiecutter.generated_file_header }}
-
 # Documentation build dependencies.
 # Keep these out of pyproject optional-dependencies to avoid resolver issues.
+
 furo
 sphinx_copybutton
 sphinxcontrib-gtagjs
@@ -14,6 +14,10 @@ sphinxnotes-project
 {%- if cookiecutter.name != 'comboroles' %}
 sphinxnotes-comboroles
 {%- endif %}
+
+# NOTE: Not used by docs (docs import extension from ../src),
+# only to resolve its optional dependencies.
+{{ cookiecutter.full_name }}
 
 # CUSTOM DOCS DEPENDENCIES START
 # CUSTOM DOCS DEPENDENCIES END

@@ -23,6 +23,6 @@ jobs:
     - uses: actions/setup-python@v6
       with:
         python-version-file: 'pyproject.toml'
-    - run: python3 -m pip install .
+    - run: python3 -m pip install .[test]
     - run: python3 -m pip install -r docs/requirements.txt
     - run: make doctest

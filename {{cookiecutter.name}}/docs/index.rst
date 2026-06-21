@@ -34,12 +34,12 @@ Getting Started
 {% if cookiecutter.is_sphinx_extension %}
 .. note::
 
-   We assume you already have a Sphinx documentation,
+   We assume you already have a Sphinx documentation project,
    if not, see `Getting Started with Sphinx`_.
 
 {% endif -%}
 {%- if cookiecutter.is_python_project %}
-First, downloading extension from PyPI:
+First, download the extension from PyPI:
 
 .. code-block:: console
 
@@ -47,7 +47,7 @@ First, downloading extension from PyPI:
 
 {% endif -%}
 {%- if cookiecutter.is_sphinx_extension %}
-Then, add the extension name to ``extensions`` configuration item in your
+Then, add the extension name to ``extensions`` configuration option in your
 :parsed_literal:`conf.py_`:
 
 .. code-block:: python
